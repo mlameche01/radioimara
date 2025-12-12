@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Radio Algérienne</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<link rel="stylesheet" type="text/css" href="dist/css/green-audio-player.css"/>
+
+<style>
+    html, body {
+        height: 100%;
+    }
+
+    body {
+        margin: 0;
+        background: #000; /* Noir pour mettre en valeur le logo doré */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo {
+        width: 200px;
+        max-width: 80%;
+        margin-bottom: 30px;
+    }
+</style>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M1RZ9W13DX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-M1RZ9W13DX');
+</script>
+</head>
+
+<body>
+
+<!-- LOGO -->
+<img src="logo.png" alt="Logo" class="logo"/>
+
+<!-- AUDIO PLAYER -->
+<div class="ready-player-1 player-with-download">
+    <audio controls>
+  <source src="https://my.radioalgerie.dz/player/coran.html">
+</audio>
+</div>
+
+<script src="dist/js/green-audio-player.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    new GreenAudioPlayer('.ready-player-1', { 
+        showTooltips: true, 
+        showDownloadButton: false, 
+        enableKeystrokes: false 
+    });
+});
+</script>
+
+</body>
+</html>
+
